@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+
+  .header{
+
+            width:100%;
+
+    }
+    body{
+        margin:0;
+        background-image:url(back.jpg);
+        font-family:Helvetica;
+        }
+
+
+
+
+    .logo{
+          width:50%;
+          padding-top:50px;
+          }
+    .login
+          {
+           width:50%;
+          }
+    .logo-text
+              {
+              font-size:30px;
+              color:black;
+              font-weight:bold;
+              text-decoration:none;
+              font-family:Helvetica;
+              margin-left:90px;
+    }
+    .left-section{
+                  width:70%;
+    }
+    .main-body{
+              width:100%;
+    }
+
+    .sign{
+          width:80%;
+          padding-top:60px;
+    }
+
+    .sinup{
+          font-size:35px;
+           color:#006400;
+           font-weight:bold;
+           font-family:Helvetica;
+           margin-left:220px;
+
+    }
+    .dett{
+          width:80%;
+
+    }
+    .details{
+           font-size:16px;
+           font-family:Helvetica;
+           margin-left:220px;
+    }
+    .reg{
+          width:80%;
+          font-family:Helvetica;
+          margin-left:220px;
+          flot:left;
+
+    }
+
+
+
+    }
+    .login-controls{
+           width:80%;
+          font-family:Helvetica;
+          margin-left:220px;
+          flot:left;
+
+    }
+    .uname{
+                height: 24px;
+                width: 315px;
+                padding-top: 4px;
+                padding-bottom: 3px;
+    }
+    .unumb{
+        height: 24px;
+      width: 315px;
+      padding-top: 4px;
+      padding-bottom: 3px;
+      MARGIN-TOP: 16PX;
+
+    }
+    .sunmb{
+      height: 30px;
+      width: 100px;
+      padding-top: 4px;
+      padding-bottom: 3px;
+      MARGIN-TOP: 16PX;
+      background-color:#800080;
+      color:#F8F8FF;
+      border-color:#1E90FF;
+    }
+    .sunmb:hover{
+          background:#006400;
+    }
+    .numb{
+      adding-top: 4px;
+      padding-bottom: 3px;
+      MARGIN-TOP: 8PX;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+
+      <div class="logo">
+        <a class="logo-text" ></a>
+      </div>
+
+      <div class="login">
+
+      </div>
+
+    </div>
+
+
+  <div class="main-body">
+    <div class="left-section">
+
+
+      <div class="sign">
+      <p class="sinup">Registration Form</p>
+      </div>
+
+      <div class="dett">
+        <h1 class="details">Enter your details below:</h1>
+      </div>
+
+      <div class="reg">
+
+        <form method="post" action="register" >
+
+            {% csrf_token %}
+
+            <input class="uname" type="text" name="username" placeholder="UserName"><br>
+
+            <input class="unumb" type="text" name="first_name" placeholder="Enter your first name"><br>
+            <input class="unumb" type="text" name="last_name" placeholder="Enter your last name"><br>
+            <input class="unumb" type="email" name="email" placeholder="Enter your email"><br>
+            <input class="unumb" type="password" name="password" placeholder="create a password"><br>
+            <input class="unumb" type="password" name="password1" placeholder="conform password"><br>
+            <input class="sunmb" type="submit" value="sign up"><br>
+
+        </form>
+          {% for msg in messages %}
+          <h3>{{msg}}</h3>
+          {% endfor %}
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  </div>
+</body>
+</html>
